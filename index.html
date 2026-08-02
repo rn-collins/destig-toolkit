@@ -190,7 +190,7 @@ a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
   window.addEventListener('load',function(){
     fetch('/api/track',{method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify({event:'page_view',source:'destig-toolkit',referrer:document.referrer||'direct',utm:window._getUTM()})
-    }}).catch(function(){});
+    }).catch(function(){});
   });
   var ms=[25,50,75,90],fired={};
   window.addEventListener('scroll',function(){
@@ -198,7 +198,7 @@ a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
     var pct=Math.round((window.scrollY/h)*100);
     ms.forEach(function(m){if(pct>=m&&!fired[m]){fired[m]=1;
       fetch('/api/track',{method:'POST',headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({event:'scroll_depth',source:'destig-toolkit',depth:m+'%'})}}).catch(function(){});
+        body:JSON.stringify({event:'scroll_depth',source:'destig-toolkit',depth:m+'%'})}).catch(function(){});
     }});
   },{passive:true});
 })()
@@ -302,7 +302,7 @@ a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 <p class="hero-sig">Written by <strong>RN Collins</strong>, in collaboration with <strong>Antithesis Law PC</strong>, for every individual this work is meant to reach.</p>
 <div class="hero-btns"><button class="btn-gold" onclick="nav('start')">Choose your pathway</button><button class="btn-ghost" onclick="nav('notes')">View 222 sources</button></div>
 </div></section>
-<div class="stats-row"><div class="stat"><span class="stat-n">222</span><span class="stat-l">Primary sources</span></div><div class="stat"><span class="stat-n">29</span><span class="stat-l">Sections</span></div><div class="stat"><span class="stat-n">1,152</span><span class="stat-l">Paragraphs</span></div><div class="stat"><span class="stat-n">9</span><span class="stat-l">Substances</span></div><div class="stat"><span class="stat-n">6</span><span class="stat-l">Audiences</span></div><div class="stat"><span class="stat-n">v45</span><span class="stat-l">Current Edition</span></div></div>
+<div class="stats-row"><div class="stat"><span class="stat-n">222</span><span class="stat-l">Primary sources</span></div><div class="stat"><span class="stat-n">29</span><span class="stat-l">Sections</span></div><div class="stat"><span class="stat-n">1,152</span><span class="stat-l">Paragraphs</span></div><div class="stat"><span class="stat-n">9</span><span class="stat-l">Substances</span></div><div class="stat"><span class="stat-n">6</span><span class="stat-l">Audiences</span></div><div class="stat"><span class="stat-n">v45</span><span class="stat-l">Current as of June 2026</span></div></div>
 <section class="cats-s"><div class="sec-header"><h2>All 29 sections</h2><span class="sec-hint">Six topic areas</span></div>
 <div class="cat-grid">
 <button class="cat-card" onclick="nav('foundation')"><span class="cat-arr">→</span><div class="cat-n">01</div><div class="cat-name">Foundation</div><div class="cat-d">Six pillars of stigma, three-tier mechanism model, research timeline 1938–2026</div><div class="cat-sec">Sections I · II · III</div></button>
@@ -1520,6 +1520,7 @@ window.addEventListener('popstate',()=>{const h=location.hash.replace('#','');if
       style="width:100%;padding:.6rem;margin-bottom:.75rem;border:1px solid #ccc;box-sizing:border-box"/>
     <textarea id="ca-msg" rows="3" placeholder="Message"
       style="width:100%;padding:.6rem;margin-bottom:.75rem;border:1px solid #ccc;box-sizing:border-box;resize:vertical"></textarea>
+    <p style="font-size:.72rem;color:#666;margin:-.25rem 0 .9rem">RN Collins reviews every message personally and replies directly from rncollins@antithesis.law.</p>
     <div style="display:flex;gap:.75rem;justify-content:flex-end">
       <button onclick="document.getElementById('ca-modal').style.display='none'"
         style="background:none;border:1px solid #ccc;padding:.5rem 1rem;cursor:pointer">Cancel</button>
@@ -1535,7 +1536,7 @@ document.getElementById('ca-send').onclick=function(){
   fetch('https://rn-api.vercel.app/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},
     body:JSON.stringify({name:document.getElementById('ca-name').value,email:e,
     message:document.getElementById('ca-msg').value,source:'contact-architect-destig-toolkit'})})
-  .then(function(){document.getElementById('ca-modal').style.display='none';alert('Sent!');})
+  .then(function(){document.getElementById('ca-modal').style.display='none';alert('Message sent. RN Collins will follow up by email from rncollins@antithesis.law.');})
   .catch(function(){alert('Error. Please try again.');});
 };
 </script>
