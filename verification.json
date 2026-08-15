@@ -1,0 +1,32 @@
+{
+  "buildId": "RN-B013",
+  "repairCard": "RR-013",
+  "canonical": "https://destig-toolkit.vercel.app",
+  "verifiedAt": "2026-08-15",
+  "edition": "August 2026",
+  "publisher": "Rayven-Nikkita Collins LLC / Antithesis Law PC",
+  "navigationBranches": [
+    "start",
+    "home",
+    "foundation",
+    "substances",
+    "law",
+    "practice",
+    "equity",
+    "advanced",
+    "notes",
+    "about"
+  ],
+  "branchCount": 10,
+  "sectionCount": 29,
+  "audiencePathways": 6,
+  "citationJumpCount": 520,
+  "sourceRecordCount": 222,
+  "linkedSourceRecordCount": 177,
+  "citationIntegrity": {
+    "missingTargets": [],
+    "duplicateSourceIds": []
+  },
+  "externalDestinationCount": 228,
+  "scope": "Public education, research orientation, policy communication, and professional issue-spotting; not legal or medical advice."
+}
