@@ -237,8 +237,7 @@ a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
   button[style*="position:fixed"][style*="bottom:24px"][style*="right:24px"]{bottom:12px!important;right:12px!important;padding:7px 12px!important;font-size:11px!important}
 }
 </style>
-</head><body><a class="skip-link" href="#main">Skip to toolkit content</a>
-<a href="#main" class="skip-link">Skip to main content</a>
+</head><body><a class="skip-link" href="#main">Skip to main content</a>
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <button class="nav-brand" onclick="nav('start')" aria-label="Home">
     <span class="nav-name">RN Collins</span>
@@ -257,7 +256,7 @@ a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
     <button class="nav-about-btn" id="nb-about" onclick="nav('about')">About</button>
     <button class="nav-entry" id="nb-notes" onclick="nav('notes')">222 Sources</button>
     <button class="nav-start" id="nb-start" onclick="nav('start')">Start Here</button>
-    <button class="ham" id="ham-btn" aria-label="Menu" onclick="toggleSidebar()" style="display:none">
+    <button class="ham" id="ham-btn" aria-label="Menu" aria-expanded="false" aria-controls="sidebar" onclick="toggleSidebar()" style="display:none">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -277,7 +276,7 @@ a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
     <button class="toc-extra-btn" id="ts-notes" onclick="nav('notes')">222 Endnotes</button>
     <button class="toc-extra-btn" id="ts-about" onclick="nav('about')">About the Author</button>
   </aside>
-  <main class="main" id="main" role="main">
+  <main class="main" id="main" role="main" tabindex="-1">
     <div id="page-start" class="page"><div class="orient-hero"><div class="oh-inner">
 <div class="oh-tag">Welcome · Start Here</div>
 <h1 class="oh-title">You've found the right document.</h1>
@@ -1512,11 +1511,11 @@ function readRoute(replace){const parts=location.hash.replace('#','').split('/')
     color:#fff;border:none;padding:.55rem 1.1rem;border-radius:2rem;cursor:pointer;
     box-shadow:0 2px 12px rgba(0,0,0,.35)">Contact the Architect</button>
 </div>
-<div id="ca-modal" role="dialog" aria-modal="true"
+<div id="ca-modal" role="dialog" aria-modal="true" aria-labelledby="ca-title"
   style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.8);
   align-items:center;justify-content:center">
   <div style="background:#fff;max-width:420px;width:90%;padding:2rem;border-radius:4px">
-    <h2 style="margin:0 0 1rem">Contact the Architect</h2>
+    <h2 id="ca-title" style="margin:0 0 1rem">Contact the Architect</h2>
     <label for="ca-name" style="display:block;font-size:.75rem">Name (optional)</label><input id="ca-name" autocomplete="name" placeholder="Name (optional)"
       style="width:100%;padding:.6rem;margin-bottom:.75rem;border:1px solid #ccc;box-sizing:border-box"/>
     <label for="ca-email" style="display:block;font-size:.75rem">Email (required)</label><input id="ca-email" type="email" autocomplete="email" required placeholder="Email (required)"
