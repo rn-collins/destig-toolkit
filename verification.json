@@ -2,7 +2,7 @@
   "buildId": "RN-B013",
   "repairCard": "RR-013",
   "canonical": "https://destig-toolkit.vercel.app",
-  "verifiedAt": "2026-08-15",
+  "verifiedAt": "2026-08-29",
   "edition": "August 2026",
   "publisher": "Rayven-Nikkita Collins LLC / Antithesis Law PC",
   "navigationBranches": [
@@ -22,11 +22,15 @@
   "audiencePathways": 6,
   "citationJumpCount": 520,
   "sourceRecordCount": 222,
-  "linkedSourceRecordCount": 177,
+  "linkedSourceRecordCount": 219,
   "citationIntegrity": {
     "missingTargets": [],
     "duplicateSourceIds": []
   },
   "externalDestinationCount": 228,
-  "scope": "Public education, research orientation, policy communication, and professional issue-spotting; not legal or medical advice."
+  "scope": "Public education, research orientation, policy communication, and professional issue-spotting; not legal or medical advice.",
+  "paragraphCount": 488,
+  "reservedSourceRecords": [
+    199
+  ]
 }
