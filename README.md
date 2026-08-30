@@ -6,7 +6,7 @@ Destigmatization Toolkit: a 222-source reference on psychoactive plant medicine 
 
 ## Repository contents
 
-`404.html`, `index.html`, `robots.txt`, `sitemap.xml`, `vercel.json`, `verification.json`
+`404.html`, `fix_site30.py`, `index.html`, `robots.txt`, `sitemap.xml`, `vercel.json`, `verification.json`
 
 ## Local development
 
