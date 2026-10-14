@@ -1360,9 +1360,9 @@ a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
     <div class="cc-icon">✉</div>
     <h3 class="cc-title">Contact the Author</h3>
     <div class="cc-author-name">RN Collins</div>
-    <div class="cc-email"><a href="mailto:rncollins@antithesis.law" class="email-link">rncollins@antithesis.law</a></div>
-    <p class="cc-body" style="margin-top:.75rem">Questions about the toolkit's content, citations, methodology, clinical applications, policy use, or speaking and collaboration — reach RN Collins at Antithesis Law directly.</p>
-    <a href="mailto:rncollins@antithesis.law" class="cc-btn">Send a message →</a>
+    <div class="cc-email"><a href="https://ownership-platform.vercel.app/contact" target="_blank" rel="noopener" class="email-link">Connect with RN</a></div>
+    <p class="cc-body" style="margin-top:.75rem">Questions about the toolkit's content, citations, methodology, clinical applications, policy use, or speaking and collaboration: reach RN Collins through her Connect page.</p>
+    <a href="https://ownership-platform.vercel.app/contact" target="_blank" rel="noopener" class="cc-btn">Send a message →</a>
   </div>
   <div class="contact-card dark-card">
     <div class="cc-icon" style="color:var(--gold-lt)">⬡</div>
@@ -1391,7 +1391,7 @@ a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
           <h4>Contact</h4>
           <div style="margin-bottom:.65rem;padding:.65rem .85rem;background:rgba(248,243,236,.05);border:1px solid rgba(248,243,236,.08);border-radius:6px">
             <div style="font-family:var(--head);font-size:.65rem;color:var(--gold-lt);opacity:.8;letter-spacing:.06em;margin-bottom:.25rem">RN COLLINS · ANTITHESIS LAW PC</div>
-            <a href="mailto:rncollins@antithesis.law" style="font-family:var(--head);font-size:.78rem;color:rgba(248,243,236,.75);letter-spacing:.02em">rncollins@antithesis.law</a>
+            <a href="https://ownership-platform.vercel.app/contact" target="_blank" rel="noopener" style="font-family:var(--head);font-size:.78rem;color:rgba(248,243,236,.75);letter-spacing:.02em">Connect with RN</a>
           </div>
           <a href="https://rn-selected-work.vercel.app" target="_blank" rel="noopener" class="footer-arch-link">Get in Touch with the Architect →</a>
           <h4 style="margin-top:1.5rem">Editorial</h4>
@@ -1437,36 +1437,13 @@ checkMobile();
 window.addEventListener('resize',checkMobile);
 function readRoute(replace){const parts=location.hash.replace('#','').split('/'),id=parts[0],anchor=parts[1];if(AP.includes(id))nav(id,anchor,replace);}window.addEventListener('popstate',()=>readRoute(true));(function(){readRoute(true);})();</script>
 
-<!-- Contact the Architect -->
+<!-- Contact the Architect: links to the Connect page (no email address on public pages) -->
 <div style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:9999">
-  <button onclick="document.getElementById('ca-modal').style.display='flex'"
-    style="font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;background:#8A6218;
-    color:#fff;border:none;padding:.55rem 1.1rem;border-radius:2rem;cursor:pointer;
-    box-shadow:0 2px 12px rgba(0,0,0,.35)">Contact the Architect</button>
+  <a href="https://ownership-platform.vercel.app/contact" target="_blank" rel="noopener"
+    style="display:inline-block;font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;background:#8A6218;
+    color:#fff;text-decoration:none;padding:.55rem 1.1rem;border-radius:2rem;
+    box-shadow:0 2px 12px rgba(0,0,0,.35)">Contact the Architect</a>
 </div>
-<div id="ca-modal" role="dialog" aria-modal="true" aria-labelledby="ca-title"
-  style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.8);
-  align-items:center;justify-content:center">
-  <div style="background:#fff;max-width:420px;width:90%;padding:2rem;border-radius:4px">
-    <h2 id="ca-title" style="margin:0 0 1rem">Contact the Architect</h2>
-    <label for="ca-name" style="display:block;font-size:.75rem">Name (optional)</label><input id="ca-name" autocomplete="name" placeholder="Name (optional)"
-      style="width:100%;padding:.6rem;margin-bottom:.75rem;border:1px solid #ccc;box-sizing:border-box"/>
-    <label for="ca-email" style="display:block;font-size:.75rem">Email (required)</label><input id="ca-email" type="email" autocomplete="email" required placeholder="Email (required)"
-      style="width:100%;padding:.6rem;margin-bottom:.75rem;border:1px solid #ccc;box-sizing:border-box"/>
-    <label for="ca-msg" style="display:block;font-size:.75rem">Message</label><textarea id="ca-msg" rows="3" placeholder="Message"
-      style="width:100%;padding:.6rem;margin-bottom:.75rem;border:1px solid #ccc;box-sizing:border-box;resize:vertical"></textarea>
-    <p style="font-size:.72rem;color:#666;margin:-.25rem 0 .9rem">RN Collins reviews every message personally and replies directly from rncollins@antithesis.law.</p>
-    <div style="display:flex;gap:.75rem;justify-content:flex-end">
-      <button onclick="document.getElementById('ca-modal').style.display='none'"
-        style="background:none;border:1px solid #ccc;padding:.5rem 1rem;cursor:pointer">Cancel</button>
-      <button id="ca-send"
-        style="background:#1B7A68;color:#fff;border:none;padding:.5rem 1rem;cursor:pointer">Send</button>
-    </div>
-  </div>
-</div>
-<script>
-document.getElementById('ca-send').onclick=function(){var e=document.getElementById('ca-email').value.trim();if(!e){alert('Email is required');return;}var n=document.getElementById('ca-name').value.trim(),m=document.getElementById('ca-msg').value.trim();location.href='mailto:rncollins@antithesis.law?subject='+encodeURIComponent('Destigmatization Toolkit inquiry from '+(n||e))+'&body='+encodeURIComponent('Name: '+n+'\nEmail: '+e+'\n\n'+m);};
-</script>
 
 <div style="text-align:center;padding:.75rem 1rem;font-size:.7rem;border-top:1px solid rgba(0,0,0,.1);margin-top:2rem">
   Built by <a href="https://aloha-ai-consulting.vercel.app" target="_blank" rel="noopener"
